@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SkillTrackerModelStoreContainer" CdmEntityContainer="SkillTrackerEntities">
+    <EntitySetMapping Name="Associates">
+      <EntityTypeMapping TypeName="SkillTrackerModel.Associate">
+        <MappingFragment StoreEntitySet="Associate">
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="Status_Green" ColumnName="Status_Green" />
+          <ScalarProperty Name="Status_Blue" ColumnName="Status_Blue" />
+          <ScalarProperty Name="Status_Red" ColumnName="Status_Red" />
+          <ScalarProperty Name="Level_1" ColumnName="Level_1" />
+          <ScalarProperty Name="Level_2" ColumnName="Level_2" />
+          <ScalarProperty Name="Level_3" ColumnName="Level_3" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Strength" ColumnName="Strength" />
+          <ScalarProperty Name="Weakness" ColumnName="Weakness" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Associate_Skills">
+      <EntityTypeMapping TypeName="SkillTrackerModel.Associate_Skills">
+        <MappingFragment StoreEntitySet="Associate_Skills">
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
+          <ScalarProperty Name="Skill_Id" ColumnName="Skill_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skills">
+      <EntityTypeMapping TypeName="SkillTrackerModel.Skill">
+        <MappingFragment StoreEntitySet="Skills">
+          <ScalarProperty Name="Skill_Id" ColumnName="Skill_Id" />
+          <ScalarProperty Name="Skill_Name" ColumnName="Skill_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SkillTrackerModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

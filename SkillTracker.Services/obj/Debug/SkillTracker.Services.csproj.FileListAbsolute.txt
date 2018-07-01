@@ -1,0 +1,16 @@
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Services.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Services.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Common.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Entities.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Repositories.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\EntityFramework.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Common.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Common.dll.config
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Entities.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Entities.dll.config
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Repositories.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\SkillTracker.Repositories.dll.config
+C:\Final_SBA\SkillTracker\SkillTracker.Services\bin\Debug\EntityFramework.xml
+C:\Final_SBA\SkillTracker\SkillTracker.Services\obj\Debug\SkillTracker.Services.csprojResolveAssemblyReference.cache
+C:\Final_SBA\SkillTracker\SkillTracker.Services\obj\Debug\SkillTracker.Services.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Services\obj\Debug\SkillTracker.Services.pdb

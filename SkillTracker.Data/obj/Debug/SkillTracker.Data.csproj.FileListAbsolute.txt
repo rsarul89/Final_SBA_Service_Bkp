@@ -1,0 +1,11 @@
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Data.dll.config
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Data.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Data.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\EntityFramework.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Entities.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Entities.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\SkillTracker.Entities.dll.config
+C:\Final_SBA\SkillTracker\SkillTracker.Data\bin\Debug\EntityFramework.xml
+C:\Final_SBA\SkillTracker\SkillTracker.Data\obj\Debug\SkillTracker.Data.csprojResolveAssemblyReference.cache
+C:\Final_SBA\SkillTracker\SkillTracker.Data\obj\Debug\SkillTracker.Data.dll
+C:\Final_SBA\SkillTracker\SkillTracker.Data\obj\Debug\SkillTracker.Data.pdb

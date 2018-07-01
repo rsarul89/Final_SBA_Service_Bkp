@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Data", "SkillTracker.Data\SkillTracker.Data.csproj", "{1A190D0B-003E-46BF-8224-08D5FBB262FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Common", "SkillTracker.Common\SkillTracker.Common.csproj", "{CCBD9A9E-42B2-4E8F-85BF-99BB75DCBB5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Entities", "SkillTracker.Entities\SkillTracker.Entities.csproj", "{8FFD500E-CA1E-47DC-A866-96AAAD1F61FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Repositories", "SkillTracker.Repositories\SkillTracker.Repositories.csproj", "{8599D093-D67C-4B13-9355-480C81DC2B99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.Services", "SkillTracker.Services\SkillTracker.Services.csproj", "{BE5E88A0-EC19-4E7A-B71D-6E2BF16A421E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.WebApi", "SkillTracker.WebApi\SkillTracker.WebApi.csproj", "{C8E46389-7D5E-4DE4-94F3-7A21ED45A667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkillTracker.WebApi.Tests", "SkillTracker.WebApi.Tests\SkillTracker.WebApi.Tests.csproj", "{6C855B64-1F0E-4228-9490-DFAFFF094062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A190D0B-003E-46BF-8224-08D5FBB262FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A190D0B-003E-46BF-8224-08D5FBB262FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A190D0B-003E-46BF-8224-08D5FBB262FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A190D0B-003E-46BF-8224-08D5FBB262FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCBD9A9E-42B2-4E8F-85BF-99BB75DCBB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCBD9A9E-42B2-4E8F-85BF-99BB75DCBB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCBD9A9E-42B2-4E8F-85BF-99BB75DCBB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCBD9A9E-42B2-4E8F-85BF-99BB75DCBB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFD500E-CA1E-47DC-A866-96AAAD1F61FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFD500E-CA1E-47DC-A866-96AAAD1F61FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFD500E-CA1E-47DC-A866-96AAAD1F61FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFD500E-CA1E-47DC-A866-96AAAD1F61FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8599D093-D67C-4B13-9355-480C81DC2B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8599D093-D67C-4B13-9355-480C81DC2B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8599D093-D67C-4B13-9355-480C81DC2B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8599D093-D67C-4B13-9355-480C81DC2B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE5E88A0-EC19-4E7A-B71D-6E2BF16A421E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE5E88A0-EC19-4E7A-B71D-6E2BF16A421E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE5E88A0-EC19-4E7A-B71D-6E2BF16A421E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE5E88A0-EC19-4E7A-B71D-6E2BF16A421E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E46389-7D5E-4DE4-94F3-7A21ED45A667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E46389-7D5E-4DE4-94F3-7A21ED45A667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E46389-7D5E-4DE4-94F3-7A21ED45A667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E46389-7D5E-4DE4-94F3-7A21ED45A667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C855B64-1F0E-4228-9490-DFAFFF094062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C855B64-1F0E-4228-9490-DFAFFF094062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C855B64-1F0E-4228-9490-DFAFFF094062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C855B64-1F0E-4228-9490-DFAFFF094062}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

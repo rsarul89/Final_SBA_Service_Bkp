@@ -1,0 +1,14 @@
+Time: 30-06-2018 03:15:07 PM
+-----------------------------------------------------------
+Message: The object cannot be deleted because it was not found in the ObjectStateManager.
+StackTrace:    at System.Data.Objects.ObjectContext.DeleteObject(Object entity, EntitySet expectedEntitySet)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Remove(Object entity)
+   at System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   at SkillTracker.Repositories.GenericRepository`1.Delete(TEntity entity) in C:\Final_SBA\SkillTracker\SkillTracker.Repositories\Common\GenericRepository.cs:line 30
+   at SkillTracker.Repositories.SkillsRepository.DeleteSkill(Skill skill) in C:\Final_SBA\SkillTracker\SkillTracker.Repositories\SkillsRepository\SkillsRepository.cs:line 21
+   at SkillTracker.Services.SkillsService.RemoveSkill(Skill skill) in C:\Final_SBA\SkillTracker\SkillTracker.Services\SkillsService\SkillsService.cs:line 45
+   at SkillTracker.WebApi.Controllers.SkillController.DeleteSkill(SkillModel skill) in C:\Final_SBA\SkillTracker\SkillTracker.WebApi\Controllers\SkillController.cs:line 105
+Source: System.Data.Entity
+TargetSite: Void DeleteObject(System.Object, System.Data.Metadata.Edm.EntitySet)
+-----------------------------------------------------------
+
