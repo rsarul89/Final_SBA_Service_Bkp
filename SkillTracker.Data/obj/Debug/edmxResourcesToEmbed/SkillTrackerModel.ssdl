@@ -4,21 +4,22 @@
     <Key>
       <PropertyRef Name="Associate_Id" />
     </Key>
-    <Property Name="Associate_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="50" />
-    <Property Name="Email" Type="varchar" MaxLength="50" />
-    <Property Name="Mobile" Type="varchar" MaxLength="10" />
-    <Property Name="Pic" Type="varchar" MaxLength="100" />
-    <Property Name="Status_Green" Type="varchar" MaxLength="1" />
-    <Property Name="Status_Blue" Type="varchar" MaxLength="1" />
-    <Property Name="Status_Red" Type="varchar" MaxLength="1" />
-    <Property Name="Level_1" Type="varchar" MaxLength="1" />
-    <Property Name="Level_2" Type="varchar" MaxLength="1" />
-    <Property Name="Level_3" Type="varchar" MaxLength="1" />
+    <Property Name="Associate_Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mobile" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Pic" Type="varchar(max)" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Status_Green" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Status_Blue" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Status_Red" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Level_1" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Level_2" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Level_3" Type="varchar" MaxLength="1" Nullable="false" />
     <Property Name="Remark" Type="varchar" MaxLength="100" />
     <Property Name="Strength" Type="varchar" MaxLength="500" />
     <Property Name="Weakness" Type="varchar" MaxLength="500" />
-    <Property Name="Gender" Type="varchar" MaxLength="10" />
+    <Property Name="Other" Type="varchar" MaxLength="200" />
   </EntityType>
   <EntityType Name="Associate_Skills">
     <Key>

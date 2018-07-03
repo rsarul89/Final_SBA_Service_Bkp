@@ -38,6 +38,7 @@ namespace SkillTracker.WebApi.Models
         public string Strength { get; set; }
 
         public string Weakness { get; set; }
+        public string Other { get; set; }
 
         public IList<AssociateSkillsModel> Associate_Skills { get; set; }
     }

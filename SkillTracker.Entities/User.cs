@@ -12,20 +12,16 @@
 namespace SkillTracker.Entities
 {
 
-using System;
-    using System.Collections.Generic;
-    
-public partial class User
-{
+    public partial class User
+    {
 
-    public int user_id { get; set; }
+        public int user_id { get; set; }
 
-    public string user_name { get; set; }
+        public string user_name { get; set; }
 
-    public string user_email { get; set; }
+        public string user_email { get; set; }
 
-    public string password { get; set; }
+        public string password { get; set; }
 
-}
-
+    }
 }

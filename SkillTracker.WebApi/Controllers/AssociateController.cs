@@ -45,7 +45,7 @@ namespace SkillTracker.WebApi.Controllers
             AssociateModel result = new AssociateModel();
             try
             {
-                var alreadyExists = _associatesService.GetAssociate(assocaite.Email);
+                var alreadyExists = _associatesService.GetAssociate(assocaite.Associate_Id);
                 if (alreadyExists == null)
                 {
                     var input = Helper.CastObject<Associate>(assocaite);

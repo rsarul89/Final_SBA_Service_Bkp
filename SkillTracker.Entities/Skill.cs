@@ -11,29 +11,21 @@
 
 namespace SkillTracker.Entities
 {
-
-using System;
     using System.Collections.Generic;
-    
-public partial class Skill
-{
 
-    public Skill()
+    public partial class Skill
     {
 
-        this.Associate_Skills = new HashSet<Associate_Skills>();
+        public Skill()
+        {
+            this.Associate_Skills = new HashSet<Associate_Skills>();
+        }
+
+        public int Skill_Id { get; set; }
+
+        public string Skill_Name { get; set; }
+
+        public virtual  ICollection<Associate_Skills> Associate_Skills { get; set; }
 
     }
-
-
-    public int Skill_Id { get; set; }
-
-    public string Skill_Name { get; set; }
-
-
-
-    public virtual ICollection<Associate_Skills> Associate_Skills { get; set; }
-
-}
-
 }

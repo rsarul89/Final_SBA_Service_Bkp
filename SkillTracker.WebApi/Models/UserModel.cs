@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace SkillTracker.WebApi.Models
 {
     public class UserModel

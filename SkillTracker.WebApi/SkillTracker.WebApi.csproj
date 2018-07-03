@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BaseAPIController.cs" />
+    <Compile Include="App_Start\CustomResolver.cs" />
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\JwtManager.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />

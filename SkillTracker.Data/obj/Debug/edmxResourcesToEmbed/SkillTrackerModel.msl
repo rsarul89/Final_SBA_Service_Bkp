@@ -4,12 +4,13 @@
     <EntitySetMapping Name="Associates">
       <EntityTypeMapping TypeName="SkillTrackerModel.Associate">
         <MappingFragment StoreEntitySet="Associate">
-          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
           <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Mobile" ColumnName="Mobile" />
           <ScalarProperty Name="Pic" ColumnName="Pic" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="Status_Green" ColumnName="Status_Green" />
           <ScalarProperty Name="Status_Blue" ColumnName="Status_Blue" />
           <ScalarProperty Name="Status_Red" ColumnName="Status_Red" />
@@ -25,10 +26,10 @@
     <EntitySetMapping Name="Associate_Skills">
       <EntityTypeMapping TypeName="SkillTrackerModel.Associate_Skills">
         <MappingFragment StoreEntitySet="Associate_Skills">
-          <ScalarProperty Name="Rating" ColumnName="Rating" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
           <ScalarProperty Name="Skill_Id" ColumnName="Skill_Id" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

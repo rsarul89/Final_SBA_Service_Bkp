@@ -12,26 +12,25 @@
 namespace SkillTracker.Entities
 {
 
-using System;
-    using System.Collections.Generic;
-    
-public partial class Associate_Skills
-{
+    using System;
 
-    public int Id { get; set; }
+    public partial class Associate_Skills
+    {
 
-    public int Associate_Id { get; set; }
+        public int Id { get; set; }
 
-    public int Skill_Id { get; set; }
+        public int Associate_Id { get; set; }
 
-    public Nullable<long> Rating { get; set; }
+        public int Skill_Id { get; set; }
 
+        public Nullable<long> Rating { get; set; }
 
 
-    public virtual Associate Associate { get; set; }
 
-    public virtual Skill Skill { get; set; }
+        public virtual  Associate Associate { get; set; }
 
-}
+        public virtual  Skill Skill { get; set; }
+
+    }
 
 }

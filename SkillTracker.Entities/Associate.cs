@@ -12,54 +12,53 @@
 namespace SkillTracker.Entities
 {
 
-using System;
+    using System;
     using System.Collections.Generic;
-    
-public partial class Associate
-{
 
-    public Associate()
+    public partial class Associate
     {
 
-        this.Associate_Skills = new HashSet<Associate_Skills>();
+        public Associate()
+        {
+
+            this.Associate_Skills = new HashSet<Associate_Skills>();
+
+        }
+
+        public int Associate_Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Email { get; set; }
+
+        public string Mobile { get; set; }
+
+        public string Pic { get; set; }
+
+        public string Gender { get; set; }
+
+        public string Status_Green { get; set; }
+
+        public string Status_Blue { get; set; }
+
+        public string Status_Red { get; set; }
+
+        public string Level_1 { get; set; }
+
+        public string Level_2 { get; set; }
+
+        public string Level_3 { get; set; }
+
+        public string Remark { get; set; }
+
+        public string Strength { get; set; }
+
+        public string Weakness { get; set; }
+
+        public string Other { get; set; }
+
+        public virtual ICollection<Associate_Skills> Associate_Skills { get; set; }
 
     }
-
-
-    public int Associate_Id { get; set; }
-
-    public string Name { get; set; }
-
-    public string Email { get; set; }
-
-    public string Mobile { get; set; }
-
-    public string Pic { get; set; }
-
-    public string Status_Green { get; set; }
-
-    public string Status_Blue { get; set; }
-
-    public string Status_Red { get; set; }
-
-    public string Level_1 { get; set; }
-
-    public string Level_2 { get; set; }
-
-    public string Level_3 { get; set; }
-
-    public string Remark { get; set; }
-
-    public string Strength { get; set; }
-
-    public string Weakness { get; set; }
-
-    public string Gender { get; set; }
-
-
-
-    public virtual ICollection<Associate_Skills> Associate_Skills { get; set; }
-
-}
 
 }

@@ -42,7 +42,7 @@ namespace SkillTracker.WebApi.Controllers
             // if credentials are valid
             if (isUsernamePasswordValid)
             {
-                string token = JwtManager.GenerateToken(loginrequest.user_name);
+                var token = JwtManager.GenerateToken(loginrequest.user_name);
                 //return the token
                 loginResponse.token = token;
                 loginResponse.user_name = usr.user_name;

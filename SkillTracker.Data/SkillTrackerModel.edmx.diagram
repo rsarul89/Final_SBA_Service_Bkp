@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f1993685ecd14e47a018e7497e401635" Name="Diagram1">
+      <Diagram DiagramId="26e30bff95fa41cd863e734ff79da6d7" Name="Diagram1">
         <EntityTypeShape EntityType="SkillTrackerModel.Associate" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SkillTrackerModel.Associate_Skills" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillTrackerModel.Skill" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="SkillTrackerModel.User" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillTrackerModel.Skill" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkillTrackerModel.User" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="SkillTrackerModel.FK_Associate_Skills_Associate" ManuallyRouted="false" />
         <AssociationConnector Association="SkillTrackerModel.FK_Associate_Skills_Skills" ManuallyRouted="false" />
       </Diagram>

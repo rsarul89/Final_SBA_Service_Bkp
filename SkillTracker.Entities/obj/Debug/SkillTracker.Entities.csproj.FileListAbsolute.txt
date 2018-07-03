@@ -3,6 +3,6 @@ C:\Final_SBA\SkillTracker\SkillTracker.Entities\bin\Debug\SkillTracker.Entities.
 C:\Final_SBA\SkillTracker\SkillTracker.Entities\bin\Debug\SkillTracker.Entities.pdb
 C:\Final_SBA\SkillTracker\SkillTracker.Entities\bin\Debug\EntityFramework.dll
 C:\Final_SBA\SkillTracker\SkillTracker.Entities\bin\Debug\EntityFramework.xml
-C:\Final_SBA\SkillTracker\SkillTracker.Entities\obj\Debug\SkillTracker.Entities.csprojResolveAssemblyReference.cache
 C:\Final_SBA\SkillTracker\SkillTracker.Entities\obj\Debug\SkillTracker.Entities.dll
 C:\Final_SBA\SkillTracker\SkillTracker.Entities\obj\Debug\SkillTracker.Entities.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Entities\obj\Debug\SkillTracker.Entities.csprojResolveAssemblyReference.cache

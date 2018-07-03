@@ -27,6 +27,7 @@ namespace SkillTracker.Repositories
             return GetAll()
                 .AsQueryable()
                 .Include(s => s.Associate_Skills)
+                .Include(a => a.Associate_Skills.Select(x => x.Skill))
                 .AsEnumerable();
         }
 
@@ -35,6 +36,7 @@ namespace SkillTracker.Repositories
             return FindBy(a => a.Associate_Id == associate_id)
                .AsQueryable()
                .Include(a => a.Associate_Skills)
+               .Include(a => a.Associate_Skills.Select(x => x.Skill))
                .FirstOrDefault();
         }
 

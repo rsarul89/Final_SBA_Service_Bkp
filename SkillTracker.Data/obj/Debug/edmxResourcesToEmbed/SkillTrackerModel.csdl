@@ -4,22 +4,23 @@
     <Key>
       <PropertyRef Name="Associate_Id" />
     </Key>
-    <Property Name="Associate_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-    <Property Name="Pic" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Status_Green" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="Status_Blue" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="Status_Red" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="Level_1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="Level_2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-    <Property Name="Level_3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="Associate_Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status_Green" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status_Blue" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status_Red" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Level_1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Level_2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Level_3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="Strength" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <Property Name="Weakness" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Associate_Skills" Relationship="Self.FK_Associate_Skills_Associate" FromRole="Associate" ToRole="Associate_Skills" />
-    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Other" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Associate_Skills">
     <Key>
@@ -28,9 +29,9 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Associate_Id" Type="Int32" Nullable="false" />
     <Property Name="Skill_Id" Type="Int32" Nullable="false" />
+    <Property Name="Rating" Type="Int64" />
     <NavigationProperty Name="Associate" Relationship="Self.FK_Associate_Skills_Associate" FromRole="Associate_Skills" ToRole="Associate" />
     <NavigationProperty Name="Skill" Relationship="Self.FK_Associate_Skills_Skills" FromRole="Associate_Skills" ToRole="Skills" />
-    <Property Name="Rating" Type="Int64" />
   </EntityType>
   <EntityType Name="Skill">
     <Key>
