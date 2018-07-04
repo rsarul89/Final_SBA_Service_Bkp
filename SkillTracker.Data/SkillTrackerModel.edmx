@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SkillTrackerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SkillTrackerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Associate">
           <Key>
             <PropertyRef Name="Associate_Id" />
@@ -15,12 +15,12 @@
           <Property Name="Mobile" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="Pic" Type="varchar(max)" />
           <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="Status_Green" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Status_Blue" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Status_Red" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Level_1" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Level_2" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Level_3" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Status_Green" Type="bit" Nullable="false" />
+          <Property Name="Status_Blue" Type="bit" Nullable="false" />
+          <Property Name="Status_Red" Type="bit" Nullable="false" />
+          <Property Name="Level_1" Type="bit" Nullable="false" />
+          <Property Name="Level_2" Type="bit" Nullable="false" />
+          <Property Name="Level_3" Type="bit" Nullable="false" />
           <Property Name="Remark" Type="varchar" MaxLength="100" />
           <Property Name="Strength" Type="varchar" MaxLength="500" />
           <Property Name="Weakness" Type="varchar" MaxLength="500" />
@@ -33,7 +33,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Associate_Id" Type="int" Nullable="false" />
           <Property Name="Skill_Id" Type="int" Nullable="false" />
-          <Property Name="Rating" Type="bigint" />
+          <Property Name="Rating" Type="int" />
         </EntityType>
         <EntityType Name="Skills">
           <Key>
@@ -93,7 +93,8 @@
             <End Role="Associate_Skills" EntitySet="Associate_Skills" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SkillTrackerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -107,17 +108,17 @@
           <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Pic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Status_Green" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Status_Blue" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Status_Red" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Level_1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Level_2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Level_3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Status_Green" Type="Boolean" Nullable="false" />
+          <Property Name="Status_Blue" Type="Boolean" Nullable="false" />
+          <Property Name="Status_Red" Type="Boolean" Nullable="false" />
+          <Property Name="Level_1" Type="Boolean" Nullable="false" />
+          <Property Name="Level_2" Type="Boolean" Nullable="false" />
+          <Property Name="Level_3" Type="Boolean" Nullable="false" />
           <Property Name="Remark" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Strength" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="Weakness" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Associate_Skills" Relationship="Self.FK_Associate_Skills_Associate" FromRole="Associate" ToRole="Associate_Skills" />
           <Property Name="Other" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Associate_Skills" Relationship="Self.FK_Associate_Skills_Associate" FromRole="Associate" ToRole="Associate_Skills" />
         </EntityType>
         <EntityType Name="Associate_Skills">
           <Key>
@@ -126,7 +127,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Associate_Id" Type="Int32" Nullable="false" />
           <Property Name="Skill_Id" Type="Int32" Nullable="false" />
-          <Property Name="Rating" Type="Int64" />
+          <Property Name="Rating" Type="Int32" />
           <NavigationProperty Name="Associate" Relationship="Self.FK_Associate_Skills_Associate" FromRole="Associate_Skills" ToRole="Associate" />
           <NavigationProperty Name="Skill" Relationship="Self.FK_Associate_Skills_Skills" FromRole="Associate_Skills" ToRole="Skills" />
         </EntityType>
@@ -198,7 +199,6 @@
           <EntitySetMapping Name="Associates">
             <EntityTypeMapping TypeName="SkillTrackerModel.Associate">
               <MappingFragment StoreEntitySet="Associate">
-                <ScalarProperty Name="Other" ColumnName="Other" />
                 <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
@@ -214,6 +214,7 @@
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
                 <ScalarProperty Name="Strength" ColumnName="Strength" />
                 <ScalarProperty Name="Weakness" ColumnName="Weakness" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

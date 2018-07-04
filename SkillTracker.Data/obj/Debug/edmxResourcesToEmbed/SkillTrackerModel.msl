@@ -4,7 +4,6 @@
     <EntitySetMapping Name="Associates">
       <EntityTypeMapping TypeName="SkillTrackerModel.Associate">
         <MappingFragment StoreEntitySet="Associate">
-          <ScalarProperty Name="Other" ColumnName="Other" />
           <ScalarProperty Name="Associate_Id" ColumnName="Associate_Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Email" ColumnName="Email" />
@@ -20,6 +19,7 @@
           <ScalarProperty Name="Remark" ColumnName="Remark" />
           <ScalarProperty Name="Strength" ColumnName="Strength" />
           <ScalarProperty Name="Weakness" ColumnName="Weakness" />
+          <ScalarProperty Name="Other" ColumnName="Other" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

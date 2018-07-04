@@ -9,7 +9,12 @@ namespace SkillTracker.WebApi
         {
             var response = Request.CreateResponse(System.Net.HttpStatusCode.OK);
             response.Content = new StringContent(JsonConvert.SerializeObject(obj, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Include, ContractResolver = new CustomResolver() }), System.Text.Encoding.UTF8, "application/json");
-            //response.Content = new StringContent(Helper.Serialize(obj), System.Text.Encoding.UTF8, "application/json");
+            return response;
+        }
+        protected HttpResponseMessage ToJsonLargeData(dynamic obj)
+        {
+            var response = Request.CreateResponse(System.Net.HttpStatusCode.OK);
+            response.Content = new StringContent(JsonConvert.SerializeObject(obj, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Serialize, NullValueHandling = NullValueHandling.Include }), System.Text.Encoding.UTF8, "application/json");
             return response;
         }
     }

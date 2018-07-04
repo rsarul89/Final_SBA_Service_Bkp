@@ -55,11 +55,6 @@
     <Compile Include="Skill.cs">
       <DependentUpon>SkillTrackerModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="SkillTrackerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SkillTrackerModel.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="SkillTrackerModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -74,10 +69,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SkillTrackerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SkillTrackerModel.Context.cs</LastGenOutput>
-    </Content>
     <Content Include="SkillTrackerModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SkillTrackerModel.cs</LastGenOutput>

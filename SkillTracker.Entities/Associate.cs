@@ -25,6 +25,7 @@ namespace SkillTracker.Entities
 
         }
 
+
         public int Associate_Id { get; set; }
 
         public string Name { get; set; }
@@ -37,17 +38,17 @@ namespace SkillTracker.Entities
 
         public string Gender { get; set; }
 
-        public string Status_Green { get; set; }
+        public bool Status_Green { get; set; }
 
-        public string Status_Blue { get; set; }
+        public bool Status_Blue { get; set; }
 
-        public string Status_Red { get; set; }
+        public bool Status_Red { get; set; }
 
-        public string Level_1 { get; set; }
+        public bool Level_1 { get; set; }
 
-        public string Level_2 { get; set; }
+        public bool Level_2 { get; set; }
 
-        public string Level_3 { get; set; }
+        public bool Level_3 { get; set; }
 
         public string Remark { get; set; }
 
@@ -56,6 +57,8 @@ namespace SkillTracker.Entities
         public string Weakness { get; set; }
 
         public string Other { get; set; }
+
+
 
         public virtual ICollection<Associate_Skills> Associate_Skills { get; set; }
 

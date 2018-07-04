@@ -21,17 +21,17 @@ namespace SkillTracker.WebApi.Models
 
         public string Pic { get; set; }
 
-        public string Status_Green { get; set; }
+        public bool Status_Green { get; set; }
 
-        public string Status_Blue { get; set; }
+        public bool Status_Blue { get; set; }
 
-        public string Status_Red { get; set; }
+        public bool Status_Red { get; set; }
 
-        public string Level_1 { get; set; }
+        public bool Level_1 { get; set; }
 
-        public string Level_2 { get; set; }
+        public bool Level_2 { get; set; }
 
-        public string Level_3 { get; set; }
+        public bool Level_3 { get; set; }
 
         public string Remark { get; set; }
 

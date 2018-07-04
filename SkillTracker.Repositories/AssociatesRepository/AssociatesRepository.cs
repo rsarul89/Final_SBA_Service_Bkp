@@ -45,6 +45,7 @@ namespace SkillTracker.Repositories
             return FindBy(a => a.Email.Equals(associate_email, StringComparison.InvariantCultureIgnoreCase))
                .AsQueryable()
                .Include(a => a.Associate_Skills)
+               .Include(a => a.Associate_Skills.Select(x => x.Skill))
                .FirstOrDefault();
         }
 
@@ -58,14 +59,40 @@ namespace SkillTracker.Repositories
                 if (attachedEntity != null)
                 {
                     var attachedEntry = _entities.Entry(attachedEntity);
-                    attachedEntry.CurrentValues.SetValues(associate);
-                }
+                    attachedEntry.CurrentValues.SetValues(associate);                }
                 else
                 {
                     entry.State = System.Data.EntityState.Modified;
                 }
             }
-            var result = FindBy(a => a.Associate_Id == associate.Associate_Id).FirstOrDefault();
+            if (associate.Associate_Skills != null && associate.Associate_Skills.Count > 0)
+            {
+                foreach (Associate_Skills ass in associate.Associate_Skills)
+                {
+                    var entry1 = _entities.Entry<Associate_Skills>(ass);
+                    if (entry1.State == System.Data.EntityState.Detached)
+                    {
+                        var set1 = _entities.Set<Associate_Skills>();
+                        var attachedEntity1 = set1.Find(ass.Id);
+                        if (attachedEntity1 != null)
+                        {
+                            var attachedEntry1 = _entities.Entry(attachedEntity1);
+                            attachedEntry1.CurrentValues.SetValues(ass);
+                        }
+                        else
+                        {
+                            entry.State = System.Data.EntityState.Modified;
+                        }
+                    }
+                }
+            }
+
+            _entities.SaveChanges();
+            var result = FindBy(a => a.Associate_Id == associate.Associate_Id)
+                .AsQueryable()
+                .Include(a => a.Associate_Skills)
+                .Include(s => s.Associate_Skills.Select(x => x.Skill))
+                .FirstOrDefault();
             return result;
         }
     }

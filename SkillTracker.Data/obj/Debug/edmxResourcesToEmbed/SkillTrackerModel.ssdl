@@ -10,12 +10,12 @@
     <Property Name="Mobile" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="Pic" Type="varchar(max)" />
     <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
-    <Property Name="Status_Green" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="Status_Blue" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="Status_Red" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="Level_1" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="Level_2" Type="varchar" MaxLength="1" Nullable="false" />
-    <Property Name="Level_3" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="Status_Green" Type="bit" Nullable="false" />
+    <Property Name="Status_Blue" Type="bit" Nullable="false" />
+    <Property Name="Status_Red" Type="bit" Nullable="false" />
+    <Property Name="Level_1" Type="bit" Nullable="false" />
+    <Property Name="Level_2" Type="bit" Nullable="false" />
+    <Property Name="Level_3" Type="bit" Nullable="false" />
     <Property Name="Remark" Type="varchar" MaxLength="100" />
     <Property Name="Strength" Type="varchar" MaxLength="500" />
     <Property Name="Weakness" Type="varchar" MaxLength="500" />
@@ -28,7 +28,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Associate_Id" Type="int" Nullable="false" />
     <Property Name="Skill_Id" Type="int" Nullable="false" />
-    <Property Name="Rating" Type="bigint" />
+    <Property Name="Rating" Type="int" />
   </EntityType>
   <EntityType Name="Skills">
     <Key>

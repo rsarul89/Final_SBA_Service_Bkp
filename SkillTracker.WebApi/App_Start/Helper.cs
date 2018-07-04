@@ -12,7 +12,11 @@ namespace SkillTracker.WebApi
     {
         public static T CastObject<T>(object source)
         {
-            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(source, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Include, ContractResolver = new CustomResolver() }));
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(source, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Include }));
+        }
+        public static T CastObjectLargeData<T>(object source)
+        {
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(source, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Serialize, NullValueHandling = NullValueHandling.Include, ContractResolver = new CustomResolver() }));
         }
         public static string Serialize(object value)
         {

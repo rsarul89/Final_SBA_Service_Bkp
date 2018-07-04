@@ -18,7 +18,7 @@ namespace SkillTracker.Entities
         public SkillTrackerEntities()
             : base("name=SkillTrackerEntities")
         {
-            this.Configuration.ProxyCreationEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
