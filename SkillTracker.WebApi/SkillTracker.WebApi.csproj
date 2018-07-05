@@ -151,6 +151,7 @@
     </Compile>
     <Compile Include="Models\AssociateModel.cs" />
     <Compile Include="Models\AssociateSkillsModel.cs" />
+    <Compile Include="Models\DashBoardDataModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegisteModel.cs" />
     <Compile Include="Models\SkillModel.cs" />

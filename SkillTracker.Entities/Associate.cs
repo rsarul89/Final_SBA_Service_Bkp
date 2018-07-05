@@ -14,7 +14,9 @@ namespace SkillTracker.Entities
 
     using System;
     using System.Collections.Generic;
+    using System.Runtime.Serialization;
 
+    [DataContract]
     public partial class Associate
     {
 
@@ -25,42 +27,41 @@ namespace SkillTracker.Entities
 
         }
 
-
+        [DataMember]
         public int Associate_Id { get; set; }
-
+        [DataMember]
         public string Name { get; set; }
-
+        [DataMember]
         public string Email { get; set; }
-
+        [DataMember]
         public string Mobile { get; set; }
-
+        [DataMember]
         public string Pic { get; set; }
-
+        [DataMember]
         public string Gender { get; set; }
-
+        [DataMember]
         public bool Status_Green { get; set; }
-
+        [DataMember]
         public bool Status_Blue { get; set; }
-
+        [DataMember]
         public bool Status_Red { get; set; }
-
+        [DataMember]
         public bool Level_1 { get; set; }
-
+        [DataMember]
         public bool Level_2 { get; set; }
-
+        [DataMember]
         public bool Level_3 { get; set; }
-
+        [DataMember]
         public string Remark { get; set; }
-
+        [DataMember]
         public string Strength { get; set; }
-
+        [DataMember]
         public string Weakness { get; set; }
-
+        [DataMember]
         public string Other { get; set; }
 
-
-
-        public virtual ICollection<Associate_Skills> Associate_Skills { get; set; }
+        [DataMember]
+        public virtual  ICollection<Associate_Skills> Associate_Skills { get; set; }
 
     }
 

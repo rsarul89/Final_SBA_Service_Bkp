@@ -7,7 +7,7 @@ namespace SkillTracker.Repositories
     {
         Associate AddAssociate(Associate associate);
         void DeleteAssociate(Associate associate);
-        Associate UpdateAssociate(Associate associate);
+        void UpdateAssociate(Associate associate);
         IEnumerable<Associate> GetAllAssociates();
         Associate GetAssociate(int associate_id);
         Associate GetAssociate(string associate_email);

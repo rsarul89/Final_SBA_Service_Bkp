@@ -4,6 +4,7 @@ using SkillTracker.Services;
 using SkillTracker.WebApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
 
@@ -69,6 +70,49 @@ namespace SkillTracker.WebApi.Controllers
             {
                 var res = _associatesService.GetAssociate(associate.Associate_Id);
                 result = Helper.CastObject<AssociateModel>(res);
+            }
+            catch (Exception ex)
+            {
+                _logManager.WriteLog(ex);
+            }
+            return ToJson(result);
+        }
+
+        [HttpGet]
+        [Route("getDashBoardData")]
+        public HttpResponseMessage GetDashBoardData()
+        {
+            DashBoardDataModel result = new DashBoardDataModel();
+            try
+            {
+                var data = _associatesService.GetAllAssociates().ToList();
+                if (data != null && data.Count > 0)
+                {
+                    int totalCandidates = data.Count();
+                    result.registeredUsers = totalCandidates;
+                    if (totalCandidates > 0)
+                    {
+                        var candFreshers = data.Where(c => c.Level_1 == true).Count();
+                        result.candidateFreshers = candFreshers > 0 ? (candFreshers * 100 / totalCandidates) : 0;
+                        var l1Candidates = data.Where(c => c.Level_1 == true).Count();
+                        result.level1candidates = l1Candidates > 0 ? (l1Candidates * 100 / totalCandidates) : 0;
+                        var l2Candidates = data.Where(c => c.Level_2 == true).Count();
+                        result.level2candidates = l2Candidates > 0 ? (l2Candidates * 100 / totalCandidates) : 0;
+                        var l3Candidates = data.Where(c => c.Level_3 == true).Count();
+                        result.level3candidates = l3Candidates > 0 ? (l3Candidates * 100 / totalCandidates) : 0;
+                        result.candidatesRated = data.Where(c => c.Associate_Skills.Any(x => x.Rating > 0)).Count();
+                        var femaleCandidates = data.Where(c => c.Gender.Equals("female", StringComparison.InvariantCultureIgnoreCase)).Count();
+                        result.femaleCandidates = femaleCandidates > 0 ? (femaleCandidates * 100 / totalCandidates) : 0;
+                        var femaleCandidatesRated = data.Where(c => c.Gender.Equals("female", StringComparison.InvariantCultureIgnoreCase)
+                           && c.Associate_Skills.Any(x => x.Rating > 0)).Count();
+                        result.femaleCandidatesRated = femaleCandidatesRated > 0 ? (femaleCandidatesRated * 100 / totalCandidates) : 0;
+                        var maleCandidates =  data.Where(c => c.Gender.Equals("male", StringComparison.InvariantCultureIgnoreCase)).Count();
+                        result.maleCandidates = maleCandidates > 0 ? (maleCandidates * 100 / totalCandidates) : 0;
+                        var maleCandidatesRated = data.Where(c => c.Gender.Equals("male", StringComparison.InvariantCultureIgnoreCase)
+                           && c.Associate_Skills.Any(x => x.Rating > 0)).Count();
+                        result.maleCandidatesRated = maleCandidatesRated > 0 ? (maleCandidatesRated * 100 / totalCandidates) : 0;
+                    }
+                }
             }
             catch (Exception ex)
             {

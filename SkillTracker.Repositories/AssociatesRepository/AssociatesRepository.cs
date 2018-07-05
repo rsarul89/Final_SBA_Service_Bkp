@@ -49,7 +49,7 @@ namespace SkillTracker.Repositories
                .FirstOrDefault();
         }
 
-        public Associate UpdateAssociate(Associate associate)
+        public void UpdateAssociate(Associate associate)
         {
             var entry = _entities.Entry<Associate>(associate);
             if (entry.State == System.Data.EntityState.Detached)
@@ -86,14 +86,6 @@ namespace SkillTracker.Repositories
                     }
                 }
             }
-
-            _entities.SaveChanges();
-            var result = FindBy(a => a.Associate_Id == associate.Associate_Id)
-                .AsQueryable()
-                .Include(a => a.Associate_Skills)
-                .Include(s => s.Associate_Skills.Select(x => x.Skill))
-                .FirstOrDefault();
-            return result;
         }
     }
 }

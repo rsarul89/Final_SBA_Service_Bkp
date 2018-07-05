@@ -45,8 +45,9 @@ namespace SkillTracker.Services
 
         public Associate UpdateAssociate(Associate associate)
         {
-            var updatedAssociate = associatesRepository.UpdateAssociate(associate);
+            associatesRepository.UpdateAssociate(associate);
             unitOfWork.Commit();
+            var updatedAssociate = associatesRepository.GetAssociate(associate.Associate_Id);
             return updatedAssociate;
         }
     }
