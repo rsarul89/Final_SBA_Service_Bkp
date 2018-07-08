@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace SkillTracker.WebApi.Models
 {
     public class DashBoardDataModel
@@ -15,6 +17,7 @@ namespace SkillTracker.WebApi.Models
             this.level1candidates = 0;
             this.level2candidates = 0;
             this.level3candidates = 0;
+            this.chartData = new List<ChartData>();
         }
         public int registeredUsers { get; set; }
         public int femaleCandidates { get; set; }
@@ -26,5 +29,14 @@ namespace SkillTracker.WebApi.Models
         public int level1candidates { get; set; }
         public int level2candidates { get; set; }
         public int level3candidates { get; set; }
+        public List<ChartData> chartData { get; set; }
+
     }
+}
+
+public class ChartData
+{
+    public string name { get; set; }
+    public string color { get; set; }
+    public double percentage { get; set; }
 }

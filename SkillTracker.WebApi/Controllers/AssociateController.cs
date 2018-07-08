@@ -106,11 +106,30 @@ namespace SkillTracker.WebApi.Controllers
                         var femaleCandidatesRated = data.Where(c => c.Gender.Equals("female", StringComparison.InvariantCultureIgnoreCase)
                            && c.Associate_Skills.Any(x => x.Rating > 0)).Count();
                         result.femaleCandidatesRated = femaleCandidatesRated > 0 ? (femaleCandidatesRated * 100 / totalCandidates) : 0;
-                        var maleCandidates =  data.Where(c => c.Gender.Equals("male", StringComparison.InvariantCultureIgnoreCase)).Count();
+                        var maleCandidates = data.Where(c => c.Gender.Equals("male", StringComparison.InvariantCultureIgnoreCase)).Count();
                         result.maleCandidates = maleCandidates > 0 ? (maleCandidates * 100 / totalCandidates) : 0;
                         var maleCandidatesRated = data.Where(c => c.Gender.Equals("male", StringComparison.InvariantCultureIgnoreCase)
                            && c.Associate_Skills.Any(x => x.Rating > 0)).Count();
                         result.maleCandidatesRated = maleCandidatesRated > 0 ? (maleCandidatesRated * 100 / totalCandidates) : 0;
+
+                        var countByName = data
+                            .SelectMany(x => x.Associate_Skills)
+                            .Where(y => y.Rating > 0)
+                            .GroupBy(c => c.Skill.Skill_Name)
+                            .Select(g => new
+                            {
+                                name = g.Key,
+                                count = g.Count()
+                            }).OrderBy(x => x.name);
+
+                        var totalCount = countByName.Sum(x => x.count);
+                        var random = new Random();
+                        result.chartData = countByName.Select(pair => new ChartData
+                        {
+                            name = pair.name,
+                            color = string.Format("#{0:X6}", random.Next(0x1000000)),
+                            percentage = (pair.count / (double)totalCount * 100)
+                        }).ToList();
                     }
                 }
             }
