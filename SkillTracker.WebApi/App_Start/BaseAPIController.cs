@@ -11,5 +11,11 @@ namespace SkillTracker.WebApi
             response.Content = new StringContent(JsonConvert.SerializeObject(obj, Formatting.Indented, new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Include, PreserveReferencesHandling = PreserveReferencesHandling.None }), System.Text.Encoding.UTF8, "application/json");
             return response;
         }
+        protected HttpResponseMessage Unauthorized()
+        {
+            var response = Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized);
+            response.Content = null;
+            return response;
+        }
     }
 }

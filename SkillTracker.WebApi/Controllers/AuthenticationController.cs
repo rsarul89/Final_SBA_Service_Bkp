@@ -53,7 +53,8 @@ namespace SkillTracker.WebApi.Controllers
             else
             {
                 // if credentials are not valid send unauthorized status code in response
-                throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                //throw new HttpResponseException(HttpStatusCode.Unauthorized);
+                return Unauthorized();
             }
         }
         [AllowAnonymous]
