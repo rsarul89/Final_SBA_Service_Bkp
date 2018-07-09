@@ -36,7 +36,7 @@ namespace SkillTracker.WebApi.Tests.Controllers
             _logManager = new LogManager();
         }
 
-        [Test()]
+        [Test(), Order(1)]
         public void AuthenticateInvalidUserTest()
         {
             LoginModel loginrequest = new LoginModel { };
@@ -55,7 +55,7 @@ namespace SkillTracker.WebApi.Tests.Controllers
             Assert.AreEqual(_response.StatusCode, HttpStatusCode.Unauthorized);
         }
 
-        [Test()]
+        [Test(), Order(2)]
         public void AuthenticateValidUserTest()
         {
             LoginModel loginrequest = new LoginModel { };
@@ -76,7 +76,104 @@ namespace SkillTracker.WebApi.Tests.Controllers
             Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
             Assert.AreEqual(loginResponse != null, true);
         }
-
+        [Test(), Order(3)]
+        public void UserRegisterTest()
+        {
+            RegisteModel registerrequest = new RegisteModel { };
+            registerrequest.user_name = "testuseradd1";
+            registerrequest.password = "test123";
+            registerrequest.user_email = "test1@mail.com";
+            UserModel registerResponse;
+            var authenticationController = new AuthenticationController(_userService, _logManager)
+            {
+                Request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Post,
+                    RequestUri = new Uri(ServiceBaseURL + "auth/register")
+                }
+            };
+            authenticationController.Configuration = new HttpConfiguration();
+            _response = authenticationController.Register(registerrequest);
+            registerResponse = JsonConvert.DeserializeObject<UserModel>(_response.Content.ReadAsStringAsync().Result);
+            Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
+            Assert.AreEqual(registerResponse != null, true);
+        }
+        [Test(), Order(4)]
+        public void UserAddest()
+        {
+            UserModel addrequest = new UserModel { };
+            addrequest.user_name = "testuseradd1";
+            addrequest.password = "test123";
+            addrequest.user_email = "test1@mail.com";
+            var authenticationController = new AuthenticationController(_userService, _logManager)
+            {
+                Request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Post,
+                    RequestUri = new Uri(ServiceBaseURL + "auth/add")
+                }
+            };
+            authenticationController.Configuration = new HttpConfiguration();
+            _response = authenticationController.AddUser(addrequest);
+            var addResponse = JsonConvert.DeserializeObject<string>(_response.Content.ReadAsStringAsync().Result);
+            if (addResponse == "success")
+            {
+                Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
+                Assert.AreNotEqual(addResponse, "");
+                Assert.AreEqual(addResponse, "success");
+            }
+            else if (addResponse == "fail")
+            {
+                Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
+                Assert.AreNotEqual(addResponse, "");
+                Assert.AreEqual(addResponse, "fail");
+            }
+        }
+        [Test(), Order(5)]
+        public void UserUpdateTest()
+        {
+            UserModel updaterequest = new UserModel { };
+            updaterequest = Helper.CastObject<UserModel>(_userService.GetUserByUserName("testuseradd1"));
+            updaterequest.user_email = "updatedemail@mail.com";
+            var authenticationController = new AuthenticationController(_userService, _logManager)
+            {
+                Request = new HttpRequestMessage
+                {
+                    Method = HttpMethod.Post,
+                    RequestUri = new Uri(ServiceBaseURL + "auth/update")
+                }
+            };
+            authenticationController.Configuration = new HttpConfiguration();
+            _response = authenticationController.UpdateUser(updaterequest);
+            var updateResponse = JsonConvert.DeserializeObject<UserModel>(_response.Content.ReadAsStringAsync().Result);
+            Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
+            Assert.NotNull(updateResponse);
+            Assert.AreEqual(updateResponse.user_email, updaterequest.user_email);
+        }
+        [Test(), Order(6)]
+        public void UserDeleteTest()
+        {
+            UserModel deleterequest = new UserModel { };
+            deleterequest = Helper.CastObject<UserModel>(_userService.GetUserByUserName("testuseradd1"));
+            if (deleterequest != null)
+            {
+                var authenticationController = new AuthenticationController(_userService, _logManager)
+                {
+                    Request = new HttpRequestMessage
+                    {
+                        Method = HttpMethod.Post,
+                        RequestUri = new Uri(ServiceBaseURL + "auth/delete")
+                    }
+                };
+                authenticationController.Configuration = new HttpConfiguration();
+                _response = authenticationController.DeleteUser(deleterequest);
+                var deleteResponse = JsonConvert.DeserializeObject<string>(_response.Content.ReadAsStringAsync().Result);
+                Assert.AreEqual(_response.StatusCode, HttpStatusCode.OK);
+                Assert.AreNotEqual(deleteResponse, "");
+                Assert.AreEqual(deleteResponse, "success");
+            }
+        }
+       
         #region Tear Down
         /// <summary>
         /// Tears down each test data

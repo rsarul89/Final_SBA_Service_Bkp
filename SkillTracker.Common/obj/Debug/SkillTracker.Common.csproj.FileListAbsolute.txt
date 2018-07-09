@@ -3,3 +3,4 @@ C:\Final_SBA\SkillTracker\SkillTracker.Common\bin\Debug\SkillTracker.Common.dll
 C:\Final_SBA\SkillTracker\SkillTracker.Common\bin\Debug\SkillTracker.Common.pdb
 C:\Final_SBA\SkillTracker\SkillTracker.Common\obj\Debug\SkillTracker.Common.dll
 C:\Final_SBA\SkillTracker\SkillTracker.Common\obj\Debug\SkillTracker.Common.pdb
+C:\Final_SBA\SkillTracker\SkillTracker.Common\obj\Debug\SkillTracker.Common.csprojResolveAssemblyReference.cache

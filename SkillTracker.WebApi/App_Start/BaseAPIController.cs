@@ -17,5 +17,11 @@ namespace SkillTracker.WebApi
             response.Content = null;
             return response;
         }
+        protected HttpResponseMessage RequestBad()
+        {
+            var response = Request.CreateResponse(System.Net.HttpStatusCode.BadRequest);
+            response.Content = null;
+            return response;
+        }
     }
 }

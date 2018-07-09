@@ -70,6 +70,10 @@ namespace SkillTracker.WebApi.Controllers
                 usr = Helper.CastObject<User>(register);
                 _userService.CreateUser(usr);
             }
+            else
+            {
+                usr = Helper.CastObject<User>(register);
+            }
             if(usr != null)
             {
                 string token = JwtManager.GenerateToken(usr.user_name);
@@ -83,7 +87,87 @@ namespace SkillTracker.WebApi.Controllers
             else
             {
                 // if user not valid send Bad Request status code in response
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return RequestBad();
+            }
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("add")]
+        public HttpResponseMessage AddUser([FromBody] UserModel user)
+        {
+            User usr = new User();
+            var userExists = _userService.GetUserByUserName(user.user_name);
+            if (userExists == null)
+            {
+                usr = Helper.CastObject<User>(user);
+                _userService.CreateUser(usr);
+            }
+            var userExists1 = _userService.GetUserByUserName(user.user_name);
+            if (userExists1 == null)
+            {
+                return ToJson("success");
+            }
+            else if (userExists1 != null)
+            {
+                return ToJson("fail");
+                // if user not valid send Bad Request status code in response
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
+
+            }
+            else
+            {
+                return RequestBad();
+            }
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("delete")]
+        public HttpResponseMessage DeleteUser([FromBody] UserModel user)
+        {
+            User usr = new User();
+            var userExists = _userService.GetUserByUserName(user.user_name);
+            if (userExists != null)
+            {
+                usr = Helper.CastObject<User>(user);
+                _userService.DeleteUser(usr);
+            }
+            var userExists1 = _userService.GetUserByUserName(user.user_name);
+            if (userExists1 == null)
+            {
+                return ToJson("success");
+            }
+            else
+            {
+                // if user not valid send Bad Request status code in response
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return RequestBad();
+            }
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("update")]
+        public HttpResponseMessage UpdateUser([FromBody] UserModel user)
+        {
+            var updateResponse = new UserModel { };
+            User usr = new User();
+            var userExists = _userService.GetUserByUserName(user.user_name);
+            if (userExists != null)
+            {
+                usr = Helper.CastObject<User>(user);
+                _userService.UpdateUser(usr);
+            }
+            var updatedUser = _userService.GetUserByUserName(user.user_name);
+            if (updatedUser != null)
+            {
+                updateResponse = Helper.CastObject<UserModel>(updatedUser);
+                return ToJson(updateResponse);
+            }
+            else
+            {
+                // if user not valid send Bad Request status code in response
+                //throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return RequestBad();
             }
         }
         private User CheckUser(string username, string password)

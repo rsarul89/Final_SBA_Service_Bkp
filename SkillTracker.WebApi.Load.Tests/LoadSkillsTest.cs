@@ -56,7 +56,7 @@ namespace SkillTracker.WebApi.Load.Tests
             response = JsonConvert.DeserializeObject<List<SkillModel>>(_response.Content.ReadAsStringAsync().Result);
             if (_response.StatusCode == HttpStatusCode.OK)
             {
-                //addCounter.Increment();
+                
             }
         }
 

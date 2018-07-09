@@ -51,6 +51,9 @@
     <Reference Include="NBench, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NBench.1.1.0\lib\net452\NBench.dll</HintPath>
     </Reference>
+    <Reference Include="NBench.Runner, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NBench.Runner.1.1.0\lib\net452\NBench.Runner.exe</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -82,6 +85,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoadAssociatesTests.cs" />
+    <Compile Include="LoadUserTests.cs" />
     <Compile Include="PerformanceTestStuite.cs" />
     <Compile Include="LoadSkillsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,7 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-    <None Include="_RunCodeCoverageInOutput.bat" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SkillTracker.Common\SkillTracker.Common.csproj">

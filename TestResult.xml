@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.4.1.0" clr-version="4.0.30319.42000" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.905432">
-  <command-line><![CDATA["C:\Final_SBA\SkillTracker\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" "C:\Final_SBA\SkillTracker\SkillTracker.WebApi.Load.Tests\bin\Debug\SkillTracker.WebApi.Load.Tests.dll"]]></command-line>
-  <test-suite type="Assembly" id="0-1003" name="SkillTracker.WebApi.Load.Tests.dll" fullname="C:\Final_SBA\SkillTracker\SkillTracker.WebApi.Load.Tests\bin\Debug\SkillTracker.WebApi.Load.Tests.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.502031" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
+<test-run id="2" testcasecount="15" result="Passed" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="21" engine-version="3.4.1.0" clr-version="4.0.30319.42000" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="14.828299">
+  <command-line><![CDATA["C:\Final_SBA\SkillTracker\packages\NUnit.ConsoleRunner.3.4.1\tools\nunit3-console.exe" "C:\Final_SBA\SkillTracker\SkillTracker.Repository.Tests\bin\Debug\SkillTracker.Repository.Tests.dll"]]></command-line>
+  <test-suite type="Assembly" id="0-1018" name="SkillTracker.Repository.Tests.dll" fullname="C:\Final_SBA\SkillTracker\SkillTracker.Repository.Tests\bin\Debug\SkillTracker.Repository.Tests.dll" runstate="Runnable" testcasecount="15" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="14.615652" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="21">
     <environment framework-version="3.5.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.17134.0" platform="Win32NT" cwd="C:\Final_SBA\SkillTracker" machine-name="DOTNET" user="Admin" user-domain="DOTNET" culture="en-IN" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="WorkDirectory" value="C:\Final_SBA\SkillTracker" />
@@ -12,21 +12,92 @@
       <setting name="NumberOfTestWorkers" value="3" />
     </settings>
     <properties>
-      <property name="_PID" value="8864" />
+      <property name="_PID" value="18508" />
       <property name="_APPDOMAIN" value="test-domain-" />
     </properties>
-    <test-suite type="TestSuite" id="0-1004" name="SkillTracker" fullname="SkillTracker" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.440993" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-      <test-suite type="TestSuite" id="0-1005" name="WebApi" fullname="SkillTracker.WebApi" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.435734" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-        <test-suite type="TestSuite" id="0-1006" name="Load" fullname="SkillTracker.WebApi.Load" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.431588" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-          <test-suite type="TestSuite" id="0-1007" name="Tests" fullname="SkillTracker.WebApi.Load.Tests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.427279" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-            <test-suite type="TestFixture" id="0-1000" name="LoadSkillsTest" fullname="SkillTracker.WebApi.Load.Tests.LoadSkillsTest" classname="SkillTracker.WebApi.Load.Tests.LoadSkillsTest" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.419366" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-              <test-suite type="ParameterizedMethod" id="0-1002" name="PerformanceTests" fullname="SkillTracker.WebApi.Load.Tests.LoadSkillsTest.PerformanceTests" classname="SkillTracker.WebApi.Load.Tests.PerformanceTestStuite`1" runstate="Runnable" testcasecount="1" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.405227" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="1">
-                <test-case id="0-1001" name="GetSkillBenchmark" fullname="SkillTracker.WebApi.Load.Tests.LoadSkillsTest.GetSkillBenchmark" methodname="PerformanceTests" classname="SkillTracker.WebApi.Load.Tests.PerformanceTestStuite`1" runstate="Runnable" seed="702684385" result="Passed" start-time="2018-07-08 20:13:31Z" end-time="2018-07-08 20:14:28Z" duration="56.370109" asserts="1">
-                  <output><![CDATA[[PASS] Expected Elapsed Time to must be less than or equal to 6,00,000.00 ms; actual value was 59.67 ms.
-]]></output>
-                </test-case>
-              </test-suite>
-            </test-suite>
+    <test-suite type="TestSuite" id="0-1019" name="SkillTracker" fullname="SkillTracker" runstate="Runnable" testcasecount="15" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="14.568020" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="21">
+      <test-suite type="TestSuite" id="0-1020" name="Repository" fullname="SkillTracker.Repository" runstate="Runnable" testcasecount="15" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="14.564072" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="21">
+        <test-suite type="TestSuite" id="0-1021" name="Tests" fullname="SkillTracker.Repository.Tests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="14.558979" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="21">
+          <test-suite type="TestFixture" id="0-1000" name="AssociateRepositoryTests" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:07Z" duration="13.959725" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="10">
+            <test-case id="0-1001" name="GetAllAssociates" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.GetAllAssociates" methodname="GetAllAssociates" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="424998874" result="Passed" start-time="2018-07-09 12:51:53Z" end-time="2018-07-09 12:52:04Z" duration="11.264681" asserts="1">
+              <properties>
+                <property name="Order" value="1" />
+              </properties>
+            </test-case>
+            <test-case id="0-1002" name="GetAssociateById" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.GetAssociateById" methodname="GetAssociateById" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="1558538348" result="Passed" start-time="2018-07-09 12:52:04Z" end-time="2018-07-09 12:52:05Z" duration="0.994531" asserts="2">
+              <properties>
+                <property name="Order" value="2" />
+              </properties>
+            </test-case>
+            <test-case id="0-1003" name="GetAssociateByEmail" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.GetAssociateByEmail" methodname="GetAssociateByEmail" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="845201859" result="Passed" start-time="2018-07-09 12:52:05Z" end-time="2018-07-09 12:52:05Z" duration="0.137105" asserts="2">
+              <properties>
+                <property name="Order" value="3" />
+              </properties>
+            </test-case>
+            <test-case id="0-1004" name="CreateAssociateTest" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.CreateAssociateTest" methodname="CreateAssociateTest" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="1214126269" result="Passed" start-time="2018-07-09 12:52:05Z" end-time="2018-07-09 12:52:06Z" duration="1.196236" asserts="2">
+              <properties>
+                <property name="Order" value="4" />
+              </properties>
+            </test-case>
+            <test-case id="0-1005" name="UpdateAssociateTest" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.UpdateAssociateTest" methodname="UpdateAssociateTest" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="583189147" result="Passed" start-time="2018-07-09 12:52:06Z" end-time="2018-07-09 12:52:07Z" duration="0.084729" asserts="2">
+              <properties>
+                <property name="Order" value="5" />
+              </properties>
+            </test-case>
+            <test-case id="0-1006" name="DeleteAssociateTest" fullname="SkillTracker.Repository.Tests.AssociateRepositoryTests.DeleteAssociateTest" methodname="DeleteAssociateTest" classname="SkillTracker.Repository.Tests.AssociateRepositoryTests" runstate="Runnable" seed="1731296796" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.204240" asserts="1">
+              <properties>
+                <property name="Order" value="6" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="0-1007" name="SkillsRepositoryTests" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.415600" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="8">
+            <test-case id="0-1008" name="GetAllSkills" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests.GetAllSkills" methodname="GetAllSkills" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" seed="1071957975" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.199998" asserts="1">
+              <properties>
+                <property name="Order" value="1" />
+              </properties>
+            </test-case>
+            <test-case id="0-1009" name="GetSkill" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests.GetSkill" methodname="GetSkill" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" seed="407243540" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.035130" asserts="2">
+              <properties>
+                <property name="Order" value="2" />
+              </properties>
+            </test-case>
+            <test-case id="0-1010" name="CreateSkillTest" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests.CreateSkillTest" methodname="CreateSkillTest" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" seed="594981680" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.021484" asserts="2">
+              <properties>
+                <property name="Order" value="3" />
+              </properties>
+            </test-case>
+            <test-case id="0-1011" name="UpdateSkillTest" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests.UpdateSkillTest" methodname="UpdateSkillTest" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" seed="1970764057" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.109986" asserts="2">
+              <properties>
+                <property name="Order" value="4" />
+              </properties>
+            </test-case>
+            <test-case id="0-1012" name="DeleteSkillTest" fullname="SkillTracker.Repository.Tests.SkillsRepositoryTests.DeleteSkillTest" methodname="DeleteSkillTest" classname="SkillTracker.Repository.Tests.SkillsRepositoryTests" runstate="Runnable" seed="918952052" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.026293" asserts="1">
+              <properties>
+                <property name="Order" value="5" />
+              </properties>
+            </test-case>
+          </test-suite>
+          <test-suite type="TestFixture" id="0-1013" name="UserRepositoryTests" fullname="SkillTracker.Repository.Tests.UserRepositoryTests" classname="SkillTracker.Repository.Tests.UserRepositoryTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.165129" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="3">
+            <test-case id="0-1014" name="AddUserTest" fullname="SkillTracker.Repository.Tests.UserRepositoryTests.AddUserTest" methodname="AddUserTest" classname="SkillTracker.Repository.Tests.UserRepositoryTests" runstate="Runnable" seed="1416378871" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.083359" asserts="1">
+              <properties>
+                <property name="Order" value="1" />
+              </properties>
+            </test-case>
+            <test-case id="0-1015" name="UserAlreadyExistsTest" fullname="SkillTracker.Repository.Tests.UserRepositoryTests.UserAlreadyExistsTest" methodname="UserAlreadyExistsTest" classname="SkillTracker.Repository.Tests.UserRepositoryTests" runstate="Runnable" seed="1208166407" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.009511" asserts="0">
+              <properties>
+                <property name="Order" value="2" />
+              </properties>
+            </test-case>
+            <test-case id="0-1016" name="UpdateUserTest" fullname="SkillTracker.Repository.Tests.UserRepositoryTests.UpdateUserTest" methodname="UpdateUserTest" classname="SkillTracker.Repository.Tests.UserRepositoryTests" runstate="Runnable" seed="1562610962" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.031380" asserts="1">
+              <properties>
+                <property name="Order" value="3" />
+              </properties>
+            </test-case>
+            <test-case id="0-1017" name="DeleteUserTest" fullname="SkillTracker.Repository.Tests.UserRepositoryTests.DeleteUserTest" methodname="DeleteUserTest" classname="SkillTracker.Repository.Tests.UserRepositoryTests" runstate="Runnable" seed="14703005" result="Passed" start-time="2018-07-09 12:52:07Z" end-time="2018-07-09 12:52:07Z" duration="0.022926" asserts="1">
+              <properties>
+                <property name="Order" value="4" />
+              </properties>
+            </test-case>
           </test-suite>
         </test-suite>
       </test-suite>

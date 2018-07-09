@@ -69,7 +69,7 @@ REM *** to check for test coverage
 "%OpenCoverExe%" ^
  -target:"%TestRunnerExe%" ^
  -targetargs:"\"%DllContainingTests%\"" ^
- -filter:"+[*]* -[*.Tests*]* -[*]*.*Config" ^
+ -filter:"+[*]* -[SkillTracker.Common]* -[*]SkillTracker.WebApi.Models.AssociateSkillsModel -[*]SkillTracker.WebApi.Models.UserModel -[*]SkillTracker.WebApi.Models.RegisteModel -[*]SkillTracker.WebApi.Models.LoginModel -[*]SkillTracker.Entities.Associate_Skills -[*]SkillTracker.Entities.User -[*]SkillTracker.WebApi.Startup -[*]SkillTracker.WebApi.Models.ChartData -[*]SkillTracker.WebApi.WebApiApplication  -[*]SkillTracker.WebApi.HttpAuthenticationChallengeContextExtensions -[*]SkillTracker.WebApi.AddChallengeOnUnauthorizedResult  -[*]SkillTracker.WebApi.AuthenticationAttribute -[*]SkillTracker.WebApi.AuthenticationFailureResult -[*]SkillTracker.WebApi.WebApiConfig -[*]SkillTracker.WebApi.CustomResolver -[*]SkillTracker.WebApi.JwtManager -[*.Tests*]* -[*]*.*Config -[*]*.*Module" ^
  -mergebyhash ^
  -skipautoprops ^
  -register:user ^

@@ -16,10 +16,10 @@
 <tr><th>Assembly:</th><td>SkillTracker.WebApi</td></tr>
 <tr><th>File(s):</th><td><a href="#CFinal_SBASkillTrackerSkillTrackerWebApiApp_StartBaseAPIControllercs">C:\Final_SBA\SkillTracker\SkillTracker.WebApi\App_Start\BaseAPIController.cs</a></td></tr>
 <tr><th>Covered lines:</th><td>10</td></tr>
-<tr><th>Uncovered lines:</th><td>0</td></tr>
-<tr><th>Coverable lines:</th><td>10</td></tr>
-<tr><th>Total lines:</th><td>21</td></tr>
-<tr><th>Line coverage:</th><td>100%</td></tr>
+<tr><th>Uncovered lines:</th><td>5</td></tr>
+<tr><th>Coverable lines:</th><td>15</td></tr>
+<tr><th>Total lines:</th><td>27</td></tr>
+<tr><th>Line coverage:</th><td>66.6%</td></tr>
 </tbody>
 </table>
 <h1>Metrics</h1>
@@ -28,6 +28,7 @@
 <tbody>
 <tr><td title="System.Net.Http.HttpResponseMessage SkillTracker.WebApi.BaseAPIController::ToJson(System.Object)">ToJson(...)</td><td>3</td><td>100</td><td>100</td></tr>
 <tr><td title="System.Net.Http.HttpResponseMessage SkillTracker.WebApi.BaseAPIController::Unauthorized()">Unauthorized()</td><td>1</td><td>100</td><td>100</td></tr>
+<tr><td title="System.Net.Http.HttpResponseMessage SkillTracker.WebApi.BaseAPIController::RequestBad()">RequestBad()</td><td>1</td><td>0</td><td>0</td></tr>
 </tbody>
 </table>
 <h1>File(s)</h1>
@@ -43,21 +44,27 @@
 <tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>6</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;class&nbsp;BaseAPIController&nbsp;:&nbsp;ApiController</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>7</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>8</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;HttpResponseMessage&nbsp;ToJson(dynamic&nbsp;obj)</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '12', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12</td><td class="rightmargin right"><code>9</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '12', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12</td><td class="rightmargin right"><code>10</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Request.CreateResponse(System.Net.HttpStatusCode.OK);</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '12', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12</td><td class="rightmargin right"><code>11</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Content&nbsp;=&nbsp;new&nbsp;StringContent(JsonConvert.SerializeObject(obj,&nbsp;Formatting.Indented,&nbsp;new&nbsp;JsonSerialize</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '12', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12</td><td class="rightmargin right"><code>12</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '12', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">12</td><td class="rightmargin right"><code>13</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><code>9</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><code>10</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Request.CreateResponse(System.Net.HttpStatusCode.OK);</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><code>11</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Content&nbsp;=&nbsp;new&nbsp;StringContent(JsonConvert.SerializeObject(obj,&nbsp;Formatting.Indented,&nbsp;new&nbsp;JsonSerialize</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><code>12</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '16', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">16</td><td class="rightmargin right"><code>13</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>14</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;HttpResponseMessage&nbsp;Unauthorized()</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">1</td><td class="rightmargin right"><code>15</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">1</td><td class="rightmargin right"><code>16</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Request.CreateResponse(System.Net.HttpStatusCode.Unauthorized);</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">1</td><td class="rightmargin right"><code>17</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Content&nbsp;=&nbsp;null;</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">1</td><td class="rightmargin right"><code>18</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>
 <tr data-coverage="{'AllTestMethods': {'VC': '1', 'LVS': 'green'}}"><td class="green">&nbsp;</td><td class="leftmargin rightmargin right">1</td><td class="rightmargin right"><code>19</code></td><td></td><td class="lightgreen"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>20</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
-<tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>21</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>20</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected&nbsp;HttpResponseMessage&nbsp;RequestBad()</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><code>21</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><code>22</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;response&nbsp;=&nbsp;Request.CreateResponse(System.Net.HttpStatusCode.BadRequest);</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><code>23</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.Content&nbsp;=&nbsp;null;</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><code>24</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;response;</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '0', 'LVS': 'red'}}"><td class="red">&nbsp;</td><td class="leftmargin rightmargin right">0</td><td class="rightmargin right"><code>25</code></td><td></td><td class="lightred"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>26</code></td><td></td><td class="lightgray"><code>&nbsp;&nbsp;&nbsp;&nbsp;}</code></td></tr>
+<tr data-coverage="{'AllTestMethods': {'VC': '', 'LVS': 'gray'}}"><td class="gray">&nbsp;</td><td class="leftmargin rightmargin right"></td><td class="rightmargin right"><code>27</code></td><td></td><td class="lightgray"><code>}</code></td></tr>
 </tbody>
 </table>
-<div class="footer">Generated by: ReportGenerator 2.4.5.0<br />09-07-2018 - 01:38:37<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
+<div class="footer">Generated by: ReportGenerator 2.4.5.0<br />09-07-2018 - 18:15:28<br /><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div>
 <script type="text/javascript" src="combined.js"></script>
 </body></html>

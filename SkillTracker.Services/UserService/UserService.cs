@@ -23,6 +23,7 @@ namespace SkillTracker.Services
             if (usr == null)
             {
                 Create(user);
+                unitOfWork.Commit();
             }
         }
 
@@ -32,7 +33,8 @@ namespace SkillTracker.Services
                 .FirstOrDefault();
             if (usr != null)
             {
-                Delete(user);
+                userRepository.DeleteUser(user);
+                unitOfWork.Commit();
             }
         }
 
@@ -58,7 +60,8 @@ namespace SkillTracker.Services
                 .FirstOrDefault();
             if (usr != null)
             {
-                Update(user);
+                userRepository.UpdateUser(user);
+                unitOfWork.Commit();
             }
         }
     }

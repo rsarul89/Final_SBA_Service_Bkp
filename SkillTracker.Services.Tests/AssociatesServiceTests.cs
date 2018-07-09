@@ -28,6 +28,8 @@ namespace SkillTracker.Services.Tests
         public void GetAllAssociates()
         {
             var associatesList = associatesService.GetAllAssociates().ToList();
+            if (associatesList == null)
+                Assert.Null(associatesList);
             Assert.NotNull(associatesList);
             Assert.GreaterOrEqual(associatesList.Count(), 0);
         }
